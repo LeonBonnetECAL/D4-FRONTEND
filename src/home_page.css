@@ -1,0 +1,28 @@
+#main-image{
+    position: absolute;
+    top: 0;
+    left:20vw;
+    width: 80vw;
+    height: 100vh;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+
+#logo{
+    position : absolute;
+    top: 5vh;
+    left: 5vw;
+    width : 10vw;
+    cursor: auto;
+    
+}
+
+#enter_button{
+    display: none;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    font-family: 'D4-font';
+    cursor: pointer;
+}

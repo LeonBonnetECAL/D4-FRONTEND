@@ -1,0 +1,57 @@
+header {
+  font-family: "D4-font";
+  width: 100vw;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(255, 255, 255);
+  padding: 1vh;
+}
+
+header-text {
+  width: 100vw;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  justify-items: space-around;
+  text-align: end;
+  place-items: end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  color: rgb(128, 128, 128);
+}
+
+#logo {
+  width: 20vh;
+  padding: 1vh;
+}
+
+#main {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(10vh);
+  grid-auto-flow: row;
+  overflow: hidden;
+}
+
+/* .project{
+
+    height: 20vh;
+    font-family: 'D4-font';
+    width: 100vw;
+    
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+   
+} */

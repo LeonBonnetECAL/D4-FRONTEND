@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'D4-font';
+    src: url('/font/Antarctica/Antarctica-Black.woff2') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D4-font';
+    src: url('/font/Antarctica/Antarctica-Bold.woff2') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D4-font';
+    src: url('/font/Antarctica/Antarctica-Light.woff2') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D4-font';
+    src: url('/font/Antarctica/Antarctica-Medium.woff2') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D4-font';
+    src: url('/font/Antarctica/Antarctica-SemiBold.woff2') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D4-font';
+    src: url('/font/Antarctica/Antarctica-Thin.woff2') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
