@@ -1,16 +1,15 @@
 #main {
   height: 80vh;
-  width: 75vw;
+  width: 85vw;
   padding-left: 15vw;
   align-items: center;
-  display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 .about_grid {
+  width: 75vw;
   display: grid;
-  width: 80vw;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
@@ -20,9 +19,16 @@ p {
   font-family: "D4-font";
   font-weight: 300;
   line-height: 2.2vh;
+  left: 75%;
+  width: 75%;
+  object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about_image {
-  width: 50vh;
+  justify-content: center;
   object-fit: cover;
+  height: 35vh;
 }

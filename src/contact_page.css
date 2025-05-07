@@ -1,22 +1,26 @@
 #main{
+    width: 75vw;
+    padding-left: 15vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+        flex-direction: column;
+        align-items: left;
+        height: fit-content;
+        padding-bottom: 10vh;
 }
 #info{
+    top: 35vh;
+    width: 80vw;
     position: absolute;
-    top: 10vh;
-
     font-family: 'D4-font';
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10%;
+    justify-content: space-between;
+    padding: 0;
 }
 
 #plan{
-    width: 50vw;
+    bottom: 5vh;
+    position: absolute;
+    height: 55vh;
+    width: 80vw;
+    object-fit: cover;
 }
