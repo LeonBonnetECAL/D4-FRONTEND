@@ -1,3 +1,8 @@
-1. Bureau, image et text doivent etre de le manier suivante, img -> text -> text -> img
+ARTHUR : 
 
-2. contact
+- js update le footer
+
+
+LEON : 
+
+- enlever le overscroll
