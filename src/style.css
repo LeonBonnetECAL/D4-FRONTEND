@@ -55,3 +55,30 @@ a:active {
     border: 1px solid black;
    
 } */
+
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+    height: 8vh;
+    padding-top: 2vh;
+  }
+
+  .header_text {
+    width: 70vw;
+    justify-content: left;
+    text-align: left;
+    padding-right: 10vw;
+    padding-top: 2vw;
+  }
+
+  #logo {
+    width: 8vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin: 0;
+  }
+
+  #main {
+    grid-template-rows: repeat(20vh);
+  }
+}

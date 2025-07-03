@@ -1,10 +1,7 @@
-#main {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  height: fit-content;
-  padding-bottom: 10vh;
-}
+/*========== Style MOBILE ===========*/
+
+
+
 /*========== Style du projet sur sa page ===========*/
 
 .main_image {

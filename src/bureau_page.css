@@ -30,5 +30,7 @@ p {
 .about_image {
   justify-content: center;
   object-fit: cover;
-  height: 35vh;
+  width: 35vw;
+  height: auto;
+  min-height: 10vh;
 }
