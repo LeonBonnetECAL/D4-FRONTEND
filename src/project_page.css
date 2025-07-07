@@ -1,7 +1,3 @@
-/*========== Style MOBILE ===========*/
-
-
-
 /*========== Style du projet sur sa page ===========*/
 
 .main_image {
@@ -109,4 +105,62 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*========== Style MOBILE ===========*/
+
+@media (max-width: 768px) {
+  .project_title,
+  .project_lieux,
+  .project_caracteristiques,
+  .section_title,
+  .section {
+    margin: 0vh;
+    left: 3vw;
+  }
+
+  .main_image {
+    left: 0;
+    align-items: center;
+    max-height: 50vh;
+    max-width: 100vw;
+    object-fit: cover;
+  }
+
+  .project_title {
+    position: relative;
+    font-size: 6vh;
+  }
+
+  .project_lieux {
+    position: relative;
+    font-size: 4vh;
+  }
+
+  .project_caracteristiques {
+    font-size: 1.8vh;
+    position: relative;
+    width: 100vw;
+    padding-top: 10vh; /* Adjusted for mobile */
+  }
+
+  .project_caracteristiques_line {
+    line-height: 2.5vh;
+  }
+
+  .project_images_grille {
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+  }
+
+  .section_title {
+    position: relative;
+    font-size: 6vh; /* Adjusted for mobile */
+  }
+
+  .project_images_grille {
+    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+    padding-left: 0; /* Remove left padding */
+  }
 }

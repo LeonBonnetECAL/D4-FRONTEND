@@ -1,7 +1,8 @@
-
-
 footer {
-  width: 85vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   height: 5vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -11,7 +12,24 @@ footer {
   color: black;
   font-size: 12px;
   font-family: "D4-font";
-  position: fixed;
-  bottom: 0;
-  left: 15vw;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 10px;
+    font-family: "D4-font";
+    z-index: 1;
+  }
 }
