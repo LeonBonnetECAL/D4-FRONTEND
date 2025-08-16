@@ -5,50 +5,59 @@
   left: 15vw;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
 
   position: relative; /* Ensure positioning context for child elements */
   overflow: hidden;
   transition: 1s ease-in-out;
   transition-delay: 0.3s;
+
+  /* border: 1px solid rgba(0, 0, 0, 0.975); */
+}
+
+.project img {
+  position: relative;
+  top: 2%;
+  visibility: hidden;
+  height: 96%;
+  width: 25vw;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.project .data{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+
+
 }
 
 .project h2 {
   font-size: 5vh;
-  position: absolute;
-  left: 50vw;
-  top: 1vh; /* Align to the bottom of the .project container */
+  position: relative;
   cursor: pointer;
 }
 
 .project p {
   font-size: 2vh;
-  position: absolute;
-  left: 50vw;
+  position: relative;
   top: 8vh; /* Align to the bottom of the .project container */
   width: 45vw;
 }
 
 .project .date {
   font-size: 2vh;
-  position: absolute;
-  left: 50vw;
+  position: relative;
   top: 10vh; /* Align to the bottom of the .project container */
-  width: 45vw;
 }
 
-.project img {
-  position: absolute;
-  top: 1vh;
-  visibility: hidden;
-  object-fit: cover;
-  height: 20vh;
-  width: 25vw;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  transition-delay: 0.3s;
-}
+
 
 /* partie mobile
 @media (max-width: 768px) {

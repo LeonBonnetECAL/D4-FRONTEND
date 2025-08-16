@@ -42,16 +42,7 @@ class project {
   }
 
   build() {
-    const title = document.createElement("h2");
-    title.textContent = this.title;
-    this.element.appendChild(title);
-
-    const location = document.createElement("p");
-    location.textContent = this.location;
-    this.element.appendChild(location);
-
     const img = document.createElement("img");
-
     this.element.appendChild(img);
     img.src = this.links[0].url;
     this.element.setAttribute("id", this.id);
@@ -59,10 +50,35 @@ class project {
       img.style.visibility = "visible";
     };
 
+    const data = document.createElement("div");
+    data.classList.add("data");
+    this.element.appendChild(data);
+
+
+    const title = document.createElement("h2");
+    title.textContent = this.title;
+    data.appendChild(title);
+
+    const location = document.createElement("p");
+    location.textContent = this.location;
+    data.appendChild(location);
+
+    const links = document.createElement("div");
+    links.classList.add("links");
+    data.appendChild(links);
+
+    this.links.forEach((link) => {
+      const a = document.createElement("a");
+      a.href = link.url;
+      a.textContent = link.title;
+      links.appendChild(a);
+    });
+
+
     const date = document.createElement("p");
     date.classList.add("date");
     date.textContent = this.date;
-    this.element.appendChild(date);
+    data.appendChild(date);
 
     title.addEventListener("click", openProject.bind(this, this.id));
     img.addEventListener("click", openProject.bind(this, this.id));
