@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
 
 .about_grid {
   width: 75vw;
@@ -34,3 +33,6 @@ p {
   height: auto;
   min-height: 10vh;
 }
+}
+
+

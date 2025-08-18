@@ -20,7 +20,7 @@ getData("projets").then((data) => {
   data.forEach((p) => {
     if (p.links && p.links.length > 0) {
       p.links.forEach((link) => {
-        if (link.url) {
+        if (link.url && link.def === "REALISATION") {
           imageUrls.push(link.url);
         }
       });
@@ -85,7 +85,7 @@ function startGalleryRotation() {
     if (mainImg) {
       mainImg.src = images[currentImageIndex].src;
     }
-  }, 2000); // Change image every 2 seconds
+  }, 4000); // Change image every 2 seconds
 }
 
 // Stop gallery rotation when user leaves the page
