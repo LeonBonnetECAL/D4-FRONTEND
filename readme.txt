@@ -1,7 +1,7 @@
 ARTHUR : 
 
 - image load faster
-- image full size
+- Image en grand quand on clic dessu
 - animation resize page (a enlever)
 
 
