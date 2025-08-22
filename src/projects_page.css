@@ -1,3 +1,4 @@
+
 .project {
   height: 30vh;
   font-family: "D4-font";
@@ -9,8 +10,8 @@
 
   position: relative; /* Ensure positioning context for child elements */
   overflow: hidden;
-  transition: 1s ease-in-out;
-  transition-delay: 0.3s;
+  /* transition: 1s ease-in-out;
+  transition-delay: 0.3s; */
 
   /* border: 1px solid rgba(0, 0, 0, 0.975); */
 }
@@ -23,8 +24,8 @@
   width: 25vw;
   object-fit: cover;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
-  transition-delay: 0.3s;
+  /* transition: 0.5s ease-in-out;
+  transition-delay: 0.3s; */
 }
 
 .project .data {
@@ -57,15 +58,10 @@
 
 @media (max-width: 768px) {
   .project {
-    height: 15vh;
-    width: 90vw;
-    left: 5vw;
-    font-family: "D4-font";
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height: 10vh;
+    /* width: 100vw; */
+    left: 0;
 
-    position: relative;
     /* Ensure positioning context for child elements */
     /* overflow: hidden;
       transition: 1s ease-in-out;
@@ -75,17 +71,13 @@
   }
 
   .project img {
-    height: 80%;
+    height: 100%;
     width: 30%;
-    position: relative;
-    visibility: hidden;
-    object-fit: cover;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transition-delay: 0.3s;
+    /* transition: 0.5s ease-in-out;
+    transition-delay: 0.3s; */
   }
 
-  .data {
+  /* .project .data {
     width: 70%;
     height: 100%;
     position: relative;
@@ -93,6 +85,12 @@
     display: flex;
     flex-direction: column;
   }
+/*  */
+  .data {
+    width: 100%;
+    height: 100%;
+    left: 0;
+  } 
 
   .project h2 {
     font-size: 2.5vh;
@@ -115,72 +113,3 @@
     /* Align to the bottom of the .project container */
   }
 }
-
-/* 
-partie mobile
-@media (max-width: 768px) {
-  .project {
-    width: 90vw;
-    height: 16vh;
-    left: 0;
-  }
-
-  .project img {
-    position: relative;
-    top: 2%;
-    visibility: hidden;
-    height: 80%;
-    width: 25vw;
-    object-fit: cover;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transition-delay: 0.3s;
-  }
-
-  .project-img {
-    width: 30%;
-    width: 16vw;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .project img {
-    width: 30%;
-    height: 16vh;
-    left: 5vw;
-    position: absolute;
-    visibility: hidden;
-    object-fit: cover;
-    cursor: pointer;
-  }
-
-  .project h2 {
-    position: relative;
-    left: 0;
-    top: 0;
-    font-size: 2.5vh;
-  }
-
-  .project-info {
-    width: 70%;
-    height: 100%;
-    left: 5vw;
-  }
-
-  .project p {
-    position: relative;
-    left: 0;
-    top: 0;
-    font-size: 1.5vh;
-  }
-
-  .project .date {
-    font-size: 1.5vh;
-    position: relative;
-    left: 0;
-    top: 0;
-  }
-}
- */

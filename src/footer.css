@@ -4,6 +4,7 @@ footer {
   left: 0;
   width: 100vw;
   height: 5vh;
+  padding: 0 5vw;
   display: flex;
   justify-content: space-around;
   align-items: center;

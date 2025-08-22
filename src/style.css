@@ -38,7 +38,7 @@ a:active {
   grid-template-rows: repeat(10vh);
   grid-auto-flow: row;
   height: fit-content;
-  padding-bottom: 10vh;
+  /* padding-bottom: 10vh; */
 }
 
 /* .project{
@@ -64,10 +64,8 @@ a:active {
   }
 
   .header_text {
-    width: 65vw;
-    justify-content: left;
+    width: 60vw;
     text-align: left;
-    padding-right: 10vw;
     padding-top: 2vw;
   }
 
