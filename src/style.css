@@ -69,6 +69,10 @@ a:active {
     padding-top: 2vw;
   }
 
+  .header_text h2 {
+    font-size: 1.5vh;
+  }
+
   #logo {
     width: 8vh;
     padding-left: 4vw;
