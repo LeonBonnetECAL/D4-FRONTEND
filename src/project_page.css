@@ -143,6 +143,16 @@
     left: 3vw;
   }
 
+  .section {
+    padding: 1vh 0;
+
+  }
+
+  main {
+    left: 0;
+    width: 100vw;
+  }
+
   .main_image {
     left: 0;
     align-items: center;
@@ -151,9 +161,18 @@
     object-fit: cover;
   }
 
+   .project_images_grille img {
+    width: 90%;
+    height: auto;
+    object-fit: unset;
+    object-position: unset;
+    padding: 1vw;
+  }
+
   .project_title {
     position: relative;
     font-size: 6vh;
+    padding-top: 1vh;
   }
 
   .project_lieux {
@@ -173,7 +192,6 @@
   }
 
   .project_images_grille {
-    display: grid;
     margin: 0;
     grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
   }
@@ -181,6 +199,7 @@
   .section_title {
     position: relative;
     font-size: 6vh; /* Adjusted for mobile */
+    padding: 1vh 1vw;
   }
 
   .project_images_grille {
