@@ -92,6 +92,7 @@
   height: 50vh;
   object-fit: contain; /* Ensures the image fits without stretching */
   object-position: center; /* Centers the image within the container */
+  cursor: pointer;
 }
 
 .project_text {
@@ -105,6 +106,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(224, 224, 224, 0.804); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+}
+
+.overlay_image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  object-position: center;
 }
 
 /*========== Style MOBILE ===========*/

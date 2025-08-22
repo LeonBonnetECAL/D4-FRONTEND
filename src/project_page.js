@@ -67,6 +67,8 @@ function buildProject(project) {
   caractéristiques_element.className = "project_caracteristiques";
   main.appendChild(caractéristiques_element);
 
+    let images = [];
+
   let images_concept = project.links.filter(
     (link) => link.def === "REALISATION"
   );
@@ -82,6 +84,7 @@ function buildProject(project) {
     image.src = img.url;
     image.className = "project_images";
     images_concept_grille.appendChild(image);
+    images.push(image);
   });
   section_concept.appendChild(section_conecpt_titre);
   section_concept.appendChild(images_concept_grille);
@@ -101,6 +104,7 @@ function buildProject(project) {
     image.src = img.url;
     image.className = "project_images";
     images_etude_grille.appendChild(image);
+    images.push(image);
   });
   section_etude.appendChild(section_etude_titre);
   section_etude.appendChild(images_etude_grille);
@@ -119,6 +123,7 @@ function buildProject(project) {
     image.src = img.url;
     image.className = "project_images";
     images_plan_grille.appendChild(image);
+    images.push(image);
   });
   section_plan.appendChild(section_plan_titre);
   section_plan.appendChild(images_plan_grille);
@@ -137,10 +142,26 @@ function buildProject(project) {
     image.src = img.url;
     image.className = "project_images";
     images_dessin_grille.appendChild(image);
+    images.push(image);
   });
   section_dessin.appendChild(section_dessin_titre);
   section_dessin.appendChild(images_dessin_grille);
   main.appendChild(section_dessin);
+
+  images.forEach((img) => {
+    img.addEventListener("click", () => {
+      let overlay = document.createElement("div");
+      overlay.className = "overlay";
+      let overlayImage = img.cloneNode(true);
+      overlayImage.className = "overlay_image";
+      overlay.appendChild(overlayImage);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener("click", () => {
+        document.body.removeChild(overlay);
+      });
+    });
+  });
 
   let texts = project.project_textes;
   console.log(texts);
@@ -183,4 +204,6 @@ function buildProject(project) {
       console.warn(`Unknown position: ${text.position}`);
     }
   });
+
+
 }
