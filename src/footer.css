@@ -12,10 +12,10 @@ footer {
   background-color: rgb(255, 255, 255);
   color: black;
   font-size: 12px;
+  font-weight: 400;
   font-family: "D4-font";
   z-index: 1;
 }
-
 
 @media (max-width: 768px) {
   footer {

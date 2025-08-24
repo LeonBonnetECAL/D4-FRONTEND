@@ -12,15 +12,15 @@ getData("projets").then((data) => {
 });
 
 let caractéristiques_labels = [
-  "MAITRE D'OUVRAGE&nbsp:",
-  "ADRESSE DU PROJET&nbsp:",
-  "DURÉE DU PROJET&nbsp:",
-  "CONCOURS PROCÉDURE OUVERTE&nbsp:",
-  "DURÉE DU MANDAT&nbsp:",
-  "COUT TOTAL CFC 1A9&nbsp:",
-  "ARCHITECTE&nbsp:",
-  "MANDAT ARCHITECTE&nbsp:",
-  "RESPONSABLES&nbsp:",
+  "MAITRE D'OUVRAGE",
+  "ADRESSE DU PROJET",
+  "DURÉE DU PROJET",
+  "CONCOURS PROCÉDURE OUVERTE",
+  "DURÉE DU MANDAT",
+  "COUT TOTAL CFC 1A9",
+  "ARCHITECTE",
+  "MANDAT ARCHITECTE",
+  "RESPONSABLES",
 ];
 
 function buildProject(project) {
