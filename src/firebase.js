@@ -5,9 +5,9 @@ import { getStorage } from "firebase/storage";
 
 // Votre configuration Firebase
 const firebaseConfig = {
-  projectId: "d4studio-84b9d",
-  apiKey: "AIzaSyAxRjt8OUhAMmikv9WeWCY9hW2-DPoCFgc",
-  storageBucket: "gs://d4studio-84b9d.firebasestorage.app",
+  projectId: "site-web-7e09d",
+  apiKey: "AIzaSyBXQQtDGIH09dksb4DYRd3_gEwve3CVqiU",
+  storageBucket: "gs://site-web-7e09d.firebasestorage.app",
 };
 
 // Initialize Firebase

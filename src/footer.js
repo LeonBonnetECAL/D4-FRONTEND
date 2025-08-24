@@ -1,7 +1,6 @@
 import {getData} from './firebase.js';
 
 getData('about').then((data) => {
-    document.getElementById('name').textContent = data[0].name 
     document.getElementById('adresse').textContent = data[0].adresse;
     document.getElementById('adresse').style.cursor = 'pointer';
     document.getElementById('adresse').addEventListener('click', () => {
