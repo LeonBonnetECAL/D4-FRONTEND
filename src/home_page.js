@@ -47,7 +47,7 @@ getData("projets").then((data) => {
     };
 
     img.addEventListener("click", () => {
-      window.location.href = "projects_page.html";
+      window.location.href = "projets.html";
     });
 
 
@@ -64,7 +64,7 @@ getData("projets").then((data) => {
     };
 
     img.addEventListener("click", () => {
-      window.location.href = "projects_page.html";
+      window.location.href = "projets.html";
     });
   }
 });
@@ -98,5 +98,5 @@ window.addEventListener("beforeunload", () => {
 });
 
 document.getElementById("main").addEventListener("click", () => {
-  window.location.href = "projects_page.html";
+  window.location.href = "projets.html";
 });

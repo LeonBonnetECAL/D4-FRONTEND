@@ -88,5 +88,5 @@ class project {
 }
 
 function openProject(id) {
-  window.location.href = `./project_page.html?id=${id}`;
+  window.location.href = `./projet.html?id=${id}`;
 }
