@@ -154,12 +154,83 @@ function buildProject(project) {
       overlay.className = "overlay";
       let overlayImage = img.cloneNode(true);
       overlayImage.className = "overlay_image";
-      overlay.appendChild(overlayImage);
-      document.body.appendChild(overlay);
+      
+      
 
       overlay.addEventListener("click", () => {
         document.body.removeChild(overlay);
       });
+
+      let leftBtn = document.createElement("button");
+      leftBtn.innerHTML = "←";
+      leftBtn.className = "overlay_btn left_btn arrow_btn";
+      let rightBtn = document.createElement("button");
+      rightBtn.innerHTML = "→";
+      rightBtn.className = "overlay_btn right_btn arrow_btn" ;
+      overlay.appendChild(leftBtn);
+      overlay.appendChild(overlayImage);
+      overlay.appendChild(rightBtn);
+      document.body.appendChild(overlay);
+
+      let currentIndex = images.indexOf(img);
+
+      leftBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        overlayImage.src = images[currentIndex].src;
+      });
+
+      rightBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        overlayImage.src = images[currentIndex].src;
+      });
+
+      overlayImage.addEventListener("dragstart", (e) => e.preventDefault());
+
+      // Enable drag left/right to navigate images
+      let startX = null;
+      overlayImage.addEventListener("mousedown", (e) => {
+        startX = e.clientX;
+      });
+      overlayImage.addEventListener("mouseup", (e) => {
+        if (startX !== null) {
+          const diff = e.clientX - startX;
+          if (diff > 50) {
+        // Dragged right, show previous image
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        overlayImage.src = images[currentIndex].src;
+          } else if (diff < -50) {
+        // Dragged left, show next image
+        currentIndex = (currentIndex + 1) % images.length;
+        overlayImage.src = images[currentIndex].src;
+          }
+        }
+        startX = null;
+      });
+
+      // Touch support for mobile
+      let touchStartX = null;
+      overlayImage.addEventListener("touchstart", (e) => {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+        }
+      });
+      overlayImage.addEventListener("touchend", (e) => {
+        if (touchStartX !== null && e.changedTouches.length === 1) {
+          const diff = e.changedTouches[0].clientX - touchStartX;
+          if (diff > 50) {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        overlayImage.src = images[currentIndex].src;
+          } else if (diff < -50) {
+        currentIndex = (currentIndex + 1) % images.length;
+        overlayImage.src = images[currentIndex].src;
+          }
+        }
+        touchStartX = null;
+      });
+
+
     });
   });
 

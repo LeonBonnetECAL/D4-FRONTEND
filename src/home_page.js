@@ -49,6 +49,8 @@ getData("projets").then((data) => {
     img.addEventListener("click", () => {
       window.location.href = "projects_page.html";
     });
+
+
   });
 
   // Set main image (first image)
@@ -95,6 +97,6 @@ window.addEventListener("beforeunload", () => {
   }
 });
 
-document.getElementById("enter_button").addEventListener("click", () => {
+document.getElementById("main").addEventListener("click", () => {
   window.location.href = "projects_page.html";
 });
