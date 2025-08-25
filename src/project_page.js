@@ -36,6 +36,8 @@ function buildProject(project) {
   title.className = "project_title";
   main.appendChild(title);
 
+  document.title = project.project_name ;
+
   const lieux = document.createElement("h2");
   lieux.innerHTML = project.project_location;
   lieux.className = "project_lieux";
