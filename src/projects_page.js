@@ -7,6 +7,8 @@ let projects = [];
 getData("projets").then((data) => {
   projects = data;
 
+  if(projects && projects.length > 0) {
+
   projects.forEach((p) => {
     console.log(p);
     const project_element = new project(
@@ -27,6 +29,7 @@ getData("projets").then((data) => {
       project_list_element.appendChild(copy);
     }
   });
+}
 });
 
 class project {

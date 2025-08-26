@@ -26,27 +26,36 @@ let caractéristiques_labels = [
 function buildProject(project) {
   const main = document.getElementById("main");
 
-  const mainIMG = document.createElement("img");
+  if(project && project.links[0].url){
+    const mainIMG = document.createElement("img");
   mainIMG.src = project.links[0].url;
   mainIMG.className = "main_image";
   main.appendChild(mainIMG);
 
-  const title = document.createElement("h1");
-  title.innerHTML = project.project_name;
-  title.className = "project_title";
-  main.appendChild(title);
+  }
 
-  document.title = project.project_name ;
+  if(project && project.project_name){
+    const title = document.createElement("h1");
+    title.innerHTML = project.project_name;
+    title.className = "project_title";
+    main.appendChild(title);
+    document.title = project.project_name ;
+  }
 
+  
+  if(project && project.project_location){
   const lieux = document.createElement("h2");
   lieux.innerHTML = project.project_location;
   lieux.className = "project_lieux";
   main.appendChild(lieux);
+  }
 
+  if(project && project.project_caracteristiques && project.project_caracteristiques.length > 0){
   const caractéristiques = project.project_caracteristiques;
   console.log(caractéristiques);
   const caractéristiques_element = document.createElement("table");
   caractéristiques.forEach((car, i) => {
+    if(car){
     let line = document.createElement("tr");
     let name = document.createElement("td");
     let value = document.createElement("td");
@@ -65,15 +74,20 @@ function buildProject(project) {
     valueText.innerHTML = car;
 
     if (car) caractéristiques_element.appendChild(line);
+    }
   });
   caractéristiques_element.className = "project_caracteristiques";
   main.appendChild(caractéristiques_element);
+}
 
     let images = [];
+
+
 
   let images_concept = project.links.filter(
     (link) => link.def === "REALISATION"
   );
+  
   const section_concept = document.createElement("div");
   const section_conecpt_titre = document.createElement("h2");
   section_conecpt_titre.innerHTML = "Réalisation";
@@ -90,7 +104,7 @@ function buildProject(project) {
   });
   section_concept.appendChild(section_conecpt_titre);
   section_concept.appendChild(images_concept_grille);
-  main.appendChild(section_concept);
+  
   console.log(images_concept);
 
   let images_etude = project.links.filter((link) => link.def === "ETUDE");
@@ -110,7 +124,7 @@ function buildProject(project) {
   });
   section_etude.appendChild(section_etude_titre);
   section_etude.appendChild(images_etude_grille);
-  main.appendChild(section_etude);
+  
 
   let images_plan = project.links.filter((link) => link.def === "PLAN");
   const section_plan = document.createElement("div");
@@ -129,7 +143,7 @@ function buildProject(project) {
   });
   section_plan.appendChild(section_plan_titre);
   section_plan.appendChild(images_plan_grille);
-  main.appendChild(section_plan);
+  
 
   let images_dessin = project.links.filter((link) => link.def === "DESSIN");
   const section_dessin = document.createElement("div");
@@ -148,7 +162,9 @@ function buildProject(project) {
   });
   section_dessin.appendChild(section_dessin_titre);
   section_dessin.appendChild(images_dessin_grille);
-  main.appendChild(section_dessin);
+
+
+  
 
   images.forEach((img) => {
     img.addEventListener("click", () => {
@@ -240,6 +256,7 @@ function buildProject(project) {
   console.log(texts);
 
   texts.forEach((text) => {
+    if(!text.content || !text.type || text == "") return;
     const textElement = document.createElement("p");
     textElement.innerHTML = text.content;
     textElement.className = "project_text";
@@ -277,6 +294,13 @@ function buildProject(project) {
       console.warn(`Unknown position: ${text.position}`);
     }
   });
+
+
+
+  if(images_concept_grille.children.length>0) main.appendChild(section_concept);
+  if(images_etude_grille.children.length>0) main.appendChild(section_etude);
+  if(images_plan_grille.children.length>0) main.appendChild(section_plan);
+  if(images_dessin_grille.children.length>0) main.appendChild(section_dessin);
 
 
 }
