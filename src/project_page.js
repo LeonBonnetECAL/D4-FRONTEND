@@ -126,25 +126,6 @@ function buildProject(project) {
   section_etude.appendChild(images_etude_grille);
   
 
-  let images_plan = project.links.filter((link) => link.def === "PLAN");
-  const section_plan = document.createElement("div");
-  const section_plan_titre = document.createElement("h2");
-  section_plan_titre.innerHTML = "Plan";
-  section_plan_titre.className = "section_title";
-  section_plan.className = "section";
-  const images_plan_grille = document.createElement("div");
-  images_plan_grille.className = "project_images_grille";
-  images_plan.forEach((img) => {
-    const image = document.createElement("img");
-    image.src = img.url;
-    image.className = "project_images";
-    images_plan_grille.appendChild(image);
-    images.push(image);
-  });
-  section_plan.appendChild(section_plan_titre);
-  section_plan.appendChild(images_plan_grille);
-  
-
   let images_dessin = project.links.filter((link) => link.def === "DESSIN");
   const section_dessin = document.createElement("div");
   const section_dessin_titre = document.createElement("h2");
@@ -162,6 +143,25 @@ function buildProject(project) {
   });
   section_dessin.appendChild(section_dessin_titre);
   section_dessin.appendChild(images_dessin_grille);
+  
+
+  let images_chantier = project.links.filter((link) => link.def === "CHANTIER");
+  const section_chantier = document.createElement("div");
+  const section_chantier_titre = document.createElement("h2");
+  section_chantier_titre.innerHTML = "Chantier";
+  section_chantier_titre.className = "section_title";
+  section_chantier.className = "section";
+  const images_chantier_grille = document.createElement("div");
+  images_chantier_grille.className = "project_images_grille";
+  images_chantier.forEach((img) => {
+    const image = document.createElement("img");
+    image.src = img.url;
+    image.className = "project_images";
+    images_chantier_grille.appendChild(image);
+    images.push(image);
+  });
+  section_chantier.appendChild(section_chantier_titre);
+  section_chantier.appendChild(images_chantier_grille);
 
 
   
@@ -269,11 +269,11 @@ function buildProject(project) {
       case "ETUDE":
         targetSection = images_etude_grille;
         break;
-      case "PLAN":
-        targetSection = images_plan_grille;
-        break;
       case "DESSIN":
         targetSection = images_dessin_grille;
+        break;
+      case "CHANTIER":
+        targetSection = images_chantier_grille;
         break;
       default:
         console.warn(`Unknown type: ${text.type}`);
@@ -299,8 +299,8 @@ function buildProject(project) {
 
   if(images_concept_grille.children.length>0) main.appendChild(section_concept);
   if(images_etude_grille.children.length>0) main.appendChild(section_etude);
-  if(images_plan_grille.children.length>0) main.appendChild(section_plan);
   if(images_dessin_grille.children.length>0) main.appendChild(section_dessin);
+  if(images_chantier_grille.children.length>0) main.appendChild(section_chantier);
 
 
 }
