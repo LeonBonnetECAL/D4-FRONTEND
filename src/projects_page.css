@@ -45,7 +45,6 @@
 .project p {
   font-size: 2vh;
   position: relative;
-  top: 8vh; /* Align to the bottom of the .project container */
   width: 45vw;
 }
 

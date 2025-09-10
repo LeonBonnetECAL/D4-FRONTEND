@@ -16,6 +16,7 @@
   font-size: 8vh;
   font-family: "D4-font";
   width: fit-content;
+  max-width: 80%;
 }
 
 .project_lieux {

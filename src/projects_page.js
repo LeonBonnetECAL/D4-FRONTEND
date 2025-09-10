@@ -7,7 +7,7 @@ let projects = [];
 getData("projets").then((data) => {
   projects = data;
 
-  projects.sort((a, b) => a.timestamp - b.timestamp);
+  projects.sort((a, b) => b.timestamp - a.timestamp);
 
   if(projects && projects.length > 0) {
 
