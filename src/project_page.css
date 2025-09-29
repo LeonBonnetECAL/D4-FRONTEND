@@ -166,6 +166,7 @@ body {
   .section {
     margin: 0vh;
     left: 3vw;
+    overflow-x: hidden;
   }
 
   .section {
@@ -198,14 +199,14 @@ body {
 
   .project_title {
     position: relative;
-    font-size: 6vh;
+    font-size: 4vh;
     padding-top: 2vh;
   }
 
   .project_lieux {
     position: relative;
-    font-size: 4vh;
-    padding-top: 1vh;
+    font-size: 3vh;
+    padding-top: 0.2vh;
   }
 
   .project_caracteristiques {

@@ -6,6 +6,7 @@
   align-items: left;
   height: fit-content;
   padding-bottom: 10vh;
+  overflow-x: hidden;
 }
 #info {
   font-family: "D4-FONT";
@@ -35,6 +36,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
   }
   #info {
     top: 30vh;

@@ -9,6 +9,7 @@
 
   position: relative; /* Ensure positioning context for child elements */
   overflow: hidden;
+  overflow-x: hidden;
   /* transition: 1s ease-in-out;
   transition-delay: 0.3s; */
 
@@ -59,6 +60,7 @@
     height: 10vh;
     left: 0;
     padding: 1vh 0;
+    overflow-x: hidden;
   }
 
   .project img {

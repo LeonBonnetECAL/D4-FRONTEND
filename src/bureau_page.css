@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .about_grid {
@@ -44,6 +45,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
   }
 
   .about_grid {

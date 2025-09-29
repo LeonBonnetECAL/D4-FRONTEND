@@ -1,5 +1,6 @@
 html{
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 header {
@@ -67,6 +68,7 @@ a:active {
     grid-template-columns: 1fr 1fr;
     height: 8vh;
     padding-top: 2vh;
+    overflow-x: hidden;
   }
 
   .header_text {

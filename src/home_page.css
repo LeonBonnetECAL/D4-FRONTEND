@@ -1,3 +1,8 @@
+/* Bloquer le défilement horizontal */
+body, html {
+  overflow-x: hidden;
+}
+
 #main-image {
   position: absolute;
   top: 0;
@@ -50,6 +55,7 @@
     height: 88vh;
     object-fit: cover;
     object-position: center;
+    overflow-x: hidden;
   }
 
   .gallery {
