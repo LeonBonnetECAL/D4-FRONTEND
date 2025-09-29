@@ -57,6 +57,7 @@
 
 @media (max-width: 768px) {
   .project {
+    width: 100vw;
     height: 10vh;
     left: 0;
     padding: 1vh 0;
@@ -81,7 +82,6 @@
   .data {
     left: -3vw;
   }
-  
 
   .project h2 {
     font-size: 2.5vh;
