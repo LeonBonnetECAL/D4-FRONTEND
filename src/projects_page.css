@@ -52,7 +52,7 @@
 .project .date {
   font-size: 2vh;
   position: relative;
-  top: 10vh; /* Align to the bottom of the .project container */
+  top: 0.5vh; /* Align to the bottom of the .project container */
 }
 
 @media (max-width: 768px) {
