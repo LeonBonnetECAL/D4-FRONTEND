@@ -45,6 +45,7 @@ body {
   left: 15vw;
   margin-top: 11vh;
   margin-bottom: 12vh;
+  letter-spacing: 0.12vh;
 }
 
 .project_caracteristiques_line {
@@ -213,11 +214,12 @@ body {
     position: relative;
     width: 100vw;
     padding-top: 10vh; /* Adjusted for mobile */
+    letter-spacing: 0vw;
   }
 
   .project_caracteristiques_line {
     font-size: 1.4vh;
-    line-height: 2.4vh;
+    line-height: 2.2vh;
   }
 
   .project_images_grille {

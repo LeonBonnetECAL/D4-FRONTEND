@@ -50,6 +50,7 @@
 }
 
 .project .date {
+  visibility: hidden;
   font-size: 2vh;
   position: relative;
   top: 0.5vh; /* Align to the bottom of the .project container */
@@ -98,6 +99,7 @@
   }
 
   .project .date {
+    visibility: hidden;
     font-size: 1.5vh;
     position: relative;
     top: 0;
