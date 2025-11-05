@@ -7,7 +7,7 @@ let projects = [];
 getData("projets").then((data) => {
   projects = data;
 
-  projects.sort((a, b) => b.timestamp - a.timestamp);
+  projects.sort((a, b) => b.project_index - a.project_index);
 
   if(projects && projects.length > 0) {
 
@@ -18,7 +18,8 @@ getData("projets").then((data) => {
       p.project_name,
       p.project_location,
       p.links,
-      p.project_date
+      p.project_date,
+      p.project_index
     ).build();
     project_list_element.appendChild(project_element);
 
@@ -35,12 +36,13 @@ getData("projets").then((data) => {
 });
 
 class project {
-  constructor(id, title, location, links, date) {
+  constructor(id, title, location, links, date,index) {
     this.id = id;
     this.title = title;
     this.location = location;
     this.links = links;
     this.date = date;
+    this.index = index;
 
     this.element = document.createElement("div");
     this.element.classList.add("project");
@@ -80,10 +82,14 @@ class project {
     });
 
 
-    const date = document.createElement("p");
-    date.classList.add("date");
-    date.textContent = this.date;
-    data.appendChild(date);
+    // const date = document.createElement("p");
+    // date.classList.add("date");
+    // date.textContent = this.date;
+    // data.appendChild(date);
+
+    const index = document.createElement("h3");
+    index.textContent = String(this.index).padStart(3, "0");
+    data.appendChild(index);
 
     title.addEventListener("click", openProject.bind(this, this.id));
     img.addEventListener("click", openProject.bind(this, this.id));
