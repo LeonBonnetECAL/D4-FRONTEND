@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && cp robots.txt dist/robots.txt && cp sitemap.xml dist/sitemap.xml && firebase deploy"
+    "deploy": "vite build && cp robots.txt dist/robots.txt && cp sitemap.xml dist/sitemap.xml && firebase deploy --only hosting"
   },
   "devDependencies": {
     "vite": "^6.0.1"

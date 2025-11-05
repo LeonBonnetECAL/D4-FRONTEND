@@ -58,7 +58,6 @@ body {
 }
 
 .project_caracteristiques_value {
-  text-transform: uppercase;
   text-align: left;
   width: 60vw;
   line-break: auto;

@@ -21,6 +21,7 @@ let caractéristiques_labels = [
   "ARCHITECTE",
   "MANDAT ARCHITECTE",
   "RESPONSABLES",
+  "PHOTOGRAPHES ET AUTRES MANDATAIRES"
 ];
 
 function buildProject(project) {
