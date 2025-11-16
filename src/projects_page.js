@@ -49,37 +49,45 @@ class project {
   }
 
   build() {
-    const img = document.createElement("img");
-    this.element.appendChild(img);
-    img.src = this.links[0].url;
-    this.element.setAttribute("id", this.id);
-    img.onload = function () {
+    let img;
+    if (this.links && this.links[0] && this.links[0].url) {
+      img = document.createElement("img");
+      img.src = this.links[0].url;
+      this.element.appendChild(img);
+      this.element.setAttribute("id", this.id);
+      img.onload = function () {
       img.style.visibility = "visible";
-    };
+      };
+    }
 
     const data = document.createElement("div");
     data.classList.add("data");
     this.element.appendChild(data);
 
-
     const title = document.createElement("h2");
-    title.textContent = this.title;
-    data.appendChild(title);
+    if (this.title){
+      title.textContent = this.title;
+      data.appendChild(title);
+    }
 
     const location = document.createElement("p");
-    location.textContent = this.location;
-    data.appendChild(location);
+    if (this.location){
+      location.textContent = this.location;
+      data.appendChild(location);
+    }
 
     const links = document.createElement("div");
+    if (this.links && this.links.length > 0) {
     links.classList.add("links");
     data.appendChild(links);
-
     this.links.forEach((link) => {
       const a = document.createElement("a");
       a.href = link.url;
       a.textContent = link.title;
       links.appendChild(a);
     });
+    }
+
 
 
     // const date = document.createElement("p");
@@ -92,11 +100,16 @@ class project {
     data.appendChild(index);
 
     title.addEventListener("click", openProject.bind(this, this.id));
-    img.addEventListener("click", openProject.bind(this, this.id));
+    if (this.links && this.links[0] && this.links[0].url) {
+      img.addEventListener("click", openProject.bind(this, this.id));
 
+    }
+
+    
     return this.element;
   }
 }
+
 
 function openProject(id) {
   window.location.href = `./projet.html?id=${id}`;

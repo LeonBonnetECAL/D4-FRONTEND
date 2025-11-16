@@ -21,13 +21,14 @@ let caractéristiques_labels = [
   "ARCHITECTE",
   "MANDAT ARCHITECTE",
   "RESPONSABLES",
-  "PHOTOGRAPHES ET AUTRES MANDATAIRES"
+  "PHOTOGRAPHES",
+  "MANDATAIRES",
 ];
 
 function buildProject(project) {
   const main = document.getElementById("main");
 
-  if(project && project.links[0].url){
+  if(project && project.links && project.links[0] && project.links[0].url){
     const mainIMG = document.createElement("img");
   mainIMG.src = project.links[0].url;
   mainIMG.className = "main_image";
@@ -56,7 +57,44 @@ function buildProject(project) {
   console.log(caractéristiques);
   const caractéristiques_element = document.createElement("table");
   caractéristiques.forEach((car, i) => {
-    if(car){
+    if(caractéristiques_labels[i]=="MANDATAIRES"){
+      if(car){
+        let mandataires = [...car.split(",")];
+        let subtable = document.createElement("table");
+        mandataires.forEach((mandataire) => {
+          let subline = document.createElement("tr");
+          let subvalue = document.createElement("td");
+          subline.appendChild(subvalue);
+          subline.className = "project_caracteristiques_subline";
+          subvalue.className = "project_caracteristiques_subvalue";
+          let subvalueText = document.createElement("p");
+          subvalue.appendChild(subvalueText);
+          subvalueText.innerHTML = mandataire.trim();
+          subtable.appendChild(subline);
+        });
+
+        let line = document.createElement("tr");
+        let name = document.createElement("td");
+        let value = document.createElement("td");
+        line.appendChild(name);
+        line.appendChild(value);
+        line.className = "project_caracteristiques_line";
+        name.className = "project_caracteristiques_name";
+        value.className = "project_caracteristiques_value";
+        value.appendChild(subtable);
+
+        let nameText = document.createElement("p");
+        name.appendChild(nameText);
+        let valueText = document.createElement("p");
+        value.appendChild(valueText);
+
+        nameText.innerHTML = caractéristiques_labels[i];
+       
+
+        if (car) caractéristiques_element.appendChild(line);
+      }
+    }
+    else if (car){
     let line = document.createElement("tr");
     let name = document.createElement("td");
     let value = document.createElement("td");
