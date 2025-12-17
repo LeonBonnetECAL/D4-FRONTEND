@@ -95,9 +95,9 @@ class project {
     // date.textContent = this.date;
     // data.appendChild(date);
 
-    const index = document.createElement("h3");
-    index.textContent = String(this.index).padStart(3, "0");
-    data.appendChild(index);
+    // const index = document.createElement("h3");
+    // index.textContent = String(this.index).padStart(3, "0");
+    // data.appendChild(index);
 
     title.addEventListener("click", openProject.bind(this, this.id));
     if (this.links && this.links[0] && this.links[0].url) {
